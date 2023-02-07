@@ -1,93 +1,172 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    background-image: url("particles.jpg");
+    height: auto;
+    background-image: url("photos/particles.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    }
+    .self-portrait {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        width: 15%; /* reduced to half of the original size */
+        height: auto;
+        border: 2px solid rgba(255, 215, 0, 0.7);
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(255, 215, 0, 0.7);
+        }
+        
+        .self-portrait img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain; /* changed object-fit to contain */
+            }
+  
 h1 {
-font-size: 36px;
-text-align: center;
-margin-top: 50px;
-color: white;
-text-shadow: 1px 1px 4px black;
-z-index: 1;
-position: relative;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-shadow: 4px 4px 7px black;
+    z-index: 1;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.01);
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 7s ease-in-out;
 }
 
-h2 {
-font-size: 24px;
-text-align: center;
-margin-top: 20px;
-color: white;
-text-shadow: 1px 1px 4px black;
-z-index: 1;
-position: relative;
+h2, h3 {
+    font-size: 28px;
+    text-align: center;
+    font-family: "Bubblegum Sans", cursive;
+    font-weight: 500;
+    margin-top: 10px;
+    color: white;
+    text-shadow: 4px 4px 7px black;
+    z-index: 1;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.01);
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 7s ease-in-out;
 }
 
 .about-me {
-width: 80%;
-margin: 0 auto;
-text-align: center;
-color: white;
-text-shadow: 1px 1px 4px black;
-z-index: 1;
-position: relative;
+    width: 55%;
+    margin: 10px auto;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-shadow: 4px 4px 7px black;
+    z-index: 1;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.01);
+    background-size: contain;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 7s ease-in-out;
+}
+
+.about-me:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+h1:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+h2:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+h3:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .about-me p {
-    font-size: 18px;
-    margin-top: 20px;
-    }
-
-    .resume-button,
-    .contact-button {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: white;
-    color: cornflowerblue;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    box-shadow: 1px 1px 4px lightgray;
-    transition: transform 0.1s ease-in-out;
-    border: 2px solid rgba(100,149,237,0.8);
+    font-size: 20px;
+    margin-top: 10px;
+}
+        
+.photos {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #photo {
+    width: 35%; /* Change this to the desired size */
+    height: auto;
     border-radius: 10px;
-    z-index: 1;
-    position: relative;
-    transform: translate(0, 0);
-    }
-    
-    .resume-button:hover,
-    .contact-button:hover {
-    transform: translate(0, -5px);
-    border-color: deepskyblue;
-    }
-    .home-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        background-color: white;
-        color: cornflowerblue;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 18px;
-        box-shadow: 1px 1px 4px lightgray;
-        transition: transform 0.1s ease-in-out;
-        border: 2px solid rgba(100,149,237,0.8);
-        border-radius: 10px;
-        z-index: 1;
-        transform: translate(0, 0);
-      }
-      
-      .home-button:hover {
-        transform: translate(0, -5px);
-        border-color: deepskyblue;
-      }
+    object-fit: contain;
+    border: 2px solid rgba(255, 215, 0, 0.7);
+    box-shadow: 2px 2px 5px rgba(255, 215, 0, 0.7);
+    transition: all 2s ease-in-out;
+  }
+  
+.resume-button,
+.contact-button {
+display: inline-block;
+margin: 10px;
+padding: 10px 20px;
+background-color: rgba(255, 255, 255, .3);
+color: rgba(0, 0, 0);
+text-decoration: none;
+border-radius: 5px;
+font-family: Arial, sans-serif;
+font-size: 18px;
+font-weight: 600;
+box-shadow: 1px 1px 4px lightgray;
+transition: background-color 8s ease-in-out;
+border: 2px solid rgba(192, 192, 192, 0.8);
+border-radius: 10px;
+z-index: 1;
+position: relative;
+transform: translate(0, 0);
+}
+
+.resume-button:hover,
+.contact-button:hover {
+transform: translate(0, -5px);
+border-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(245, 0, 0, .7);
+}
+
+.home-button {
+position: fixed;
+top: 20px;
+right: 20px;
+padding: 10px 20px;
+background-color: rgba(255, 255, 255, .3);
+color: rgb(0, 0, 0);
+text-decoration: none;
+font-family: Arial, sans-serif;
+border-radius: 5px;
+font-size: 18px;
+font-weight: 600;
+box-shadow: 1px 1px 4px lightgray;
+transition: background-color 8s ease-in-out;
+border: 2px solid rgba(192, 192, 192, 0.8);
+border-radius: 10px;
+z-index: 1;
+transform: translate(0, 0);
+}
+
+.home-button:hover {
+transform: translate(0, -5px);
+border-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(245, 0, 0, .7);
+}
+footer{
+    color: white;
+    font-weight: 500;
+}
