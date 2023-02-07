@@ -69,3 +69,25 @@ position: relative;
     transform: translate(0, -5px);
     border-color: deepskyblue;
     }
+    .home-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: white;
+        color: cornflowerblue;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        box-shadow: 1px 1px 4px lightgray;
+        transition: transform 0.1s ease-in-out;
+        border: 2px solid rgba(100,149,237,0.8);
+        border-radius: 10px;
+        z-index: 1;
+        transform: translate(0, 0);
+      }
+      
+      .home-button:hover {
+        transform: translate(0, -5px);
+        border-color: deepskyblue;
+      }
