@@ -72,9 +72,9 @@ document.addEventListener("mousemove", function(event) {
           displayedImages = [];
         }
         
-        $("#container img").fadeOut(1000, function() {
-          $("#container img").fadeOut(1000, function() {
-            $(this).attr("src", nextImage).fadeIn(1000);
+        $("#container img").fadeOut(1500, function() {
+          $("#container img").fadeOut(1500, function() {
+            $(this).attr("src", nextImage).fadeIn(1500);
           });
         });
       }
