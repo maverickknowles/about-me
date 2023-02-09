@@ -37,7 +37,7 @@ document.addEventListener("mousemove", function(event) {
     "photos/photo21.jpg",
     "photos/photo22.jpg",
     "photos/photo23.jpg",
-    "photos/photo24.jpeg",
+    "photos/photo24.jpg",
     "photos/photo25.jpg",
     "photos/photo26.jpg",
     "photos/photo27.jpg",
