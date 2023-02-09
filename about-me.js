@@ -8,12 +8,12 @@ document.addEventListener("mousemove", function(event) {
   document.addEventListener("mousemove", function(event) {
     let x = event.clientX;
     let y = event.clientY;
-    let elements = document.querySelectorAll("h1, h2, .about-me *");
+    let elements = document.querySelectorAll("h1, h2, h3, .about-me *");
     elements.forEach(function(element) {
       element.style.transform = `translate(${-x / 100}px, ${-y / 100}px)`;
     });
   });
-  const photoUrls = [
+  const photos = [
     "photos/photo1.jpg",
     "photos/photo2.jpg",
     "photos/photo3.jpg",
@@ -56,4 +56,33 @@ document.addEventListener("mousemove", function(event) {
     "photos/photo40.jpg",
     "photos/photo41.jpg"
     ];
-    photoUrls.src
+    
+    $(document).ready(function() {
+      let displayedImages = [];
+      
+      function displayRandomImage() {
+        let nextImage;
+        do {
+          nextImage = photos[Math.floor(Math.random() * photos.length)];
+        } while (displayedImages.includes(nextImage));
+        
+        displayedImages.push(nextImage);
+        
+        if (displayedImages.length === photos.length) {
+          displayedImages = [];
+        }
+        
+        $("#container img").fadeOut(1000, function() {
+          $("#container img").fadeOut(1000, function() {
+            $(this).attr("src", nextImage).fadeIn(1000);
+          });
+        });
+      }
+      
+      displayRandomImage();
+      
+      $("#container img").click(function() {
+        displayRandomImage();
+      });
+    });
+    
